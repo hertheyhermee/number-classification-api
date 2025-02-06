@@ -29,14 +29,10 @@ app.get("/api/classify-number", async (req, res) => {
     const parity = number % 2 === 0 ? "even" : "odd";
     const digitSum = number.toString().split("").reduce((sum, digit) => sum + parseInt(digit), 0);
 
-     // Randomly select one of ['math', 'trivia', 'date']
-     const options = ["math", "trivia", "date"];
-     const randomOption = options[Math.floor(Math.random() * options.length)];
-
     // Fetch fun fact from Numbers API
     let funFact = "";
     try {
-        const response = await axios.get(`http://numbersapi.com/${number}/${randomOption}`, { timeout: 5000 });
+        const response = await axios.get(`http://numbersapi.com/${number}/math`, { timeout: 5000 });
         funFact = response.data;
     } catch (error) {
         console.error("Error fetching fun fact:", error.message);
