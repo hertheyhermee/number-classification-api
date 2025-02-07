@@ -11,7 +11,7 @@ A simple API that classifies a number and provides interesting mathematical prop
 - Determines if the number is **even** or **odd**  
 - Identifies **Armstrong numbers**  
 - Computes the **sum of digits**  
-- Fetches a random fun fact from [Numbers API](http://numbersapi.com/) (`math`, `trivia`, or `date`)  
+- Fetches a random fun fact from [Numbers API](http://numbersapi.com/) (`math`)  
 
 ## **API Endpoint**  
 ### **Classify a Number**  
